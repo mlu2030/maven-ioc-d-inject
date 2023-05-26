@@ -1,6 +1,6 @@
 package io.mlu.mde;
 
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,11 +12,11 @@ public class Main {
 //        reader.loadBeanDefinitions(r);
 //
 //        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
-//        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
 
 //        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(BeanConfig.class);
 //        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(IoTDeviceBeanConfig.class);
-        AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(IoTDeviceBeanConfig.class);
+//        AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(IoTDeviceBeanConfig.class);
 
 //        IoTDevice firstBean = applicationContext.getBean(IoTDevice.class);
 //        IoTDevice secondBean = (IoTDevice) applicationContext.getBean("myBean");
