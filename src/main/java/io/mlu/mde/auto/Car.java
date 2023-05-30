@@ -1,6 +1,7 @@
 package io.mlu.mde.auto;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 //@Component
 public class Car {
@@ -60,7 +61,8 @@ public class Car {
         return engine;
     }
 
-    @Autowired (required = false)
+    @Autowired
+    @Qualifier ("engineVW")
     public void setEngine(Engine engine) {
         this.engine = engine;
         System.out.println("Inside the setter of property \"engine\".");

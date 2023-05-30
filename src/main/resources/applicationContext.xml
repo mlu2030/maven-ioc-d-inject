@@ -17,12 +17,20 @@
         <property name="combinedFuelEconomy" value="25"/>
     </bean>
 
-<!--    <bean id="engineBean" class="io.mlu.mde.auto.Engine">-->
-<!--        <constructor-arg name="horsepower" value="335"/>-->
-<!--        <constructor-arg name="maxRPM" value="5500"/>-->
-<!--        <constructor-arg name="displacement" value="3.0"/>-->
-<!--        <constructor-arg name="cylinderConfig" value="I-6"/>-->
-<!--        <constructor-arg name="recommendedFuel" value="premium unleaded"/>-->
-<!--    </bean>-->
+    <bean id="engineBMW" class="io.mlu.mde.auto.Engine">
+        <property name="horsepower" value="335"/>
+        <property name="maxRPM" value="5500"/>
+        <property name="displacement" value="3.0"/>
+        <property name="cylinderConfig" value="I-6"/>
+        <property name="recommendedFuel" value="premium unleaded"/>
+    </bean>
+
+    <bean id="engineVW" class="io.mlu.mde.auto.Engine">
+        <property name="horsepower" value="228"/>
+        <property name="maxRPM" value="5500"/>
+        <property name="displacement" value="2.0"/>
+        <property name="cylinderConfig" value="I-4"/>
+        <property name="recommendedFuel" value="premium unleaded"/>
+    </bean>
 
 </beans>

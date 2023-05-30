@@ -1,8 +1,9 @@
 package io.mlu.mde;
 
 import io.mlu.mde.auto.Car;
+import io.mlu.mde.auto.CarBeanConfig;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,8 +15,9 @@ public class Main {
 //        reader.loadBeanDefinitions(r);
 //
 //        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
-        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+//        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
 
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(CarBeanConfig.class);
         Car car = (Car) applicationContext.getBean("carBean");
         System.out.println("### The car from the Bean:\n" + car);
 
