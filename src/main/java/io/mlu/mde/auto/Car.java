@@ -13,7 +13,7 @@ public class Car {
     public Car() {
         System.out.println("Inside the default constructor of Car.");
     }
-
+    @Autowired
     public Car(String type, String model, double price, int combinedFuelEconomy, Engine engine) {
         this.type = type;
         this.model = model;
@@ -59,7 +59,7 @@ public class Car {
     public Engine getEngine() {
         return engine;
     }
-    @Autowired
+
     public void setEngine(Engine engine) {
         this.engine = engine;
         System.out.println("Inside the setter of property \"engine\".");
