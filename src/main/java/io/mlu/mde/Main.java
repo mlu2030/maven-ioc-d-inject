@@ -1,5 +1,7 @@
 package io.mlu.mde;
 
+import io.mlu.mde.auto.Car;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
@@ -11,8 +13,11 @@ public class Main {
 //        XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(beanFactory);
 //        reader.loadBeanDefinitions(r);
 //
-//        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
-        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+//        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+
+        Car car = (Car) applicationContext.getBean("carBean");
+        System.out.println("### The car from the Bean:\n" + car);
 
 //        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(BeanConfig.class);
 //        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(IoTDeviceBeanConfig.class);
@@ -20,9 +25,8 @@ public class Main {
 
 //        IoTDevice firstBean = applicationContext.getBean(IoTDevice.class);
 //        IoTDevice secondBean = (IoTDevice) applicationContext.getBean("myBean");
-
-        IoTDevice firstBean = (IoTDevice) applicationContext.getBean("FridgeBean");
-        IoTDevice secondBean = (IoTDevice) applicationContext.getBean("DishwasherBean");
+//        IoTDevice firstBean = (IoTDevice) applicationContext.getBean("FridgeBean");
+//        IoTDevice secondBean = (IoTDevice) applicationContext.getBean("DishwasherBean");
 
 //        firstBean.setDevice("Fridge");
 //        firstBean.setDescription("Wine chiller");
@@ -30,10 +34,10 @@ public class Main {
 //        secondBean.setDevice("Dishwasher");
 //        secondBean.setDescription("super fast");
 
-        System.out.println("1 - Dependence Injection:\t" + firstBean);
-        System.out.println("2 - Dependence Injection:\t" + secondBean);
+//        System.out.println("1 - Dependence Injection:\t" + firstBean);
+//        System.out.println("2 - Dependence Injection:\t" + secondBean);
 
-        applicationContext.close();
+//        applicationContext.close();
     }
 
 }
