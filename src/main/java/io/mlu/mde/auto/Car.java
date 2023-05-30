@@ -8,7 +8,6 @@ public class Car {
     String model;
     double price;
     int combinedFuelEconomy;
-    @Autowired
     Engine engine;
 
     public Car() {
@@ -60,7 +59,7 @@ public class Car {
     public Engine getEngine() {
         return engine;
     }
-
+    @Autowired
     public void setEngine(Engine engine) {
         this.engine = engine;
         System.out.println("Inside the setter of property \"engine\".");
