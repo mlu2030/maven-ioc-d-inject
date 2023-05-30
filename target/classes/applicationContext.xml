@@ -11,18 +11,18 @@
     <context:annotation-config/>
 
     <bean id="carBean" class="io.mlu.mde.auto.Car">
-        <constructor-arg name="type" value="Sedan"/>
-        <constructor-arg name="model" value="BMW 740 2021"/>
-        <constructor-arg name="price" value="88000"/>
-        <constructor-arg name="combinedFuelEconomy" value="25"/>
+        <property name="type" value="Sedan"/>
+        <property name="model" value="BMW 740 2021"/>
+        <property name="price" value="88000"/>
+        <property name="combinedFuelEconomy" value="25"/>
     </bean>
 
-    <bean id="engineBean" class="io.mlu.mde.auto.Engine">
-        <constructor-arg name="horsepower" value="335"/>
-        <constructor-arg name="maxRPM" value="5500"/>
-        <constructor-arg name="displacement" value="3.0"/>
-        <constructor-arg name="cylinderConfig" value="I-6"/>
-        <constructor-arg name="recommendedFuel" value="premium unleaded"/>
-    </bean>
+<!--    <bean id="engineBean" class="io.mlu.mde.auto.Engine">-->
+<!--        <constructor-arg name="horsepower" value="335"/>-->
+<!--        <constructor-arg name="maxRPM" value="5500"/>-->
+<!--        <constructor-arg name="displacement" value="3.0"/>-->
+<!--        <constructor-arg name="cylinderConfig" value="I-6"/>-->
+<!--        <constructor-arg name="recommendedFuel" value="premium unleaded"/>-->
+<!--    </bean>-->
 
 </beans>
