@@ -12,6 +12,7 @@ public class Car {
     Engine engine;
 
     public Car() {
+        System.out.println("Inside the default constructor of Car.");
     }
 
     public Car(String type, String model, double price, int combinedFuelEconomy, Engine engine) {
@@ -20,6 +21,8 @@ public class Car {
         this.price = price;
         this.combinedFuelEconomy = combinedFuelEconomy;
         this.engine = engine;
+
+        System.out.println("Inside the parameterized constructor of Car.");
     }
 
     public String getType() {
@@ -60,6 +63,8 @@ public class Car {
 
     public void setEngine(Engine engine) {
         this.engine = engine;
+        System.out.println("Inside the setter of property \"engine\".");
+
     }
 
     @Override
